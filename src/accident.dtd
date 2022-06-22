@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT accident-report (accident-unit)>
+<!ELEMENT accident-unit (person-involved, accident-info, abstract)>
+
+<!ELEMENT person-involved (family-name, first-name, age, gender, position)>
+<!ELEMENT family-name (#PCDATA)>
+<!ELEMENT first-name (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT gender (#PCDATA)>
+<!ELEMENT position (#PCDATA)>
+
+<!ELEMENT accident-info (occuring-date, situation, type)>
+
+<!ELEMENT occuring-date (year, month, date, time)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT month (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT time (#PCDATA)>
+
+<!ELEMENT situation (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+
+<!ELEMENT abstract (#PCDATA)>

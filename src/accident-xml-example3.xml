@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE accident-report [
+<!ELEMENT accident-report (accident-unit)>
+<!ELEMENT accident-unit (person-involved, accident-info, abstract)>
+
+<!ELEMENT person-involved (family-name, first-name, age, gender, position)>
+<!ELEMENT family-name (#PCDATA)>
+<!ELEMENT first-name (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT gender (#PCDATA)>
+<!ELEMENT position (#PCDATA)>
+
+<!ELEMENT accident-info (occuring-date, situation, type)>
+
+<!ELEMENT occuring-date (year, month, date, time)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT month (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT time (#PCDATA)>
+
+<!ELEMENT situation (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+
+<!ELEMENT abstract (#PCDATA)>
+]>
+<accident-report>
+	<accident-unit>
+		<person-involved>
+			<family-name>本郷</family-name>
+			<first-name>武</first-name>
+			<age>55</age>
+			<gender>1</gender>
+			<position>2</position>
+		</person-involved>
+		
+		<accident-info>
+			<occuring-date>
+				<year>2022</year>
+				<month>4</month>
+				<date>22</date>
+				<time>10</time>
+			</occuring-date>
+			<situation>3</situation>
+			<type>5</type>
+		</accident-info>
+		
+		<abstract>
+			通勤中に事故った。
+		</abstract>
+	</accident-unit>
+</accident-report>
