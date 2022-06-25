@@ -32,7 +32,7 @@ public class Main{
 								quitView = true;
 								break;
 							default:
-								System.out.println("正しい値を入力してください。\n");
+								System.out.println("入力された数字に誤りがあります。\n");
 						}
 					}
 					break;
@@ -41,7 +41,7 @@ public class Main{
 					quit = true;
 					break;
 				default:
-					System.out.println("正しい値を入力してください。\n");
+					System.out.println("入力された数字に誤りがあります。\n");
 			}
 		}
 	}
