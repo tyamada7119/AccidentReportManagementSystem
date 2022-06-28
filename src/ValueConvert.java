@@ -97,4 +97,29 @@ public class ValueConvert {
 		}
 	}
 	
+	public String convertSituation(int situation) {
+		switch(situation) {
+			case 1: return "実験実習中";
+			case 2: return "日常生活中"; 
+			case 3: return "通勤通学中"; 
+			case 4: return "サークル活動中"; 
+			default: return "入力された数字に誤りがあります。";
+		}
+	}
+	
+	public String convertType(int type) {
+		switch(type) {
+			case 1: return "はさまれ、巻き込まれ";
+			case 2: return "切れ、こすれ";
+			case 3: return "墜落、転落";
+			case 4: return "交通事故";
+			case 5: return "飛来、落下";
+			case 6: return "激突";
+			case 7: return "転倒";
+			case 8: return "高温、低温物との接触";
+			case 9: return "有害物との接触";
+			default: return "入力された数字に誤りがあります。";
+		}
+	}
+	
 }

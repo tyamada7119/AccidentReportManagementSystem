@@ -271,8 +271,8 @@ public class AccidentManageSystem {
 					}
 				}
 			}
-		}
-	}
+		} //while文
+	} //delete()
 	
 	
 	public void viewAll() {
@@ -410,7 +410,6 @@ public class AccidentManageSystem {
 			);
 			int input = new java.util.Scanner(System.in).nextInt();
 			
-			//TODO 各項目の絞込み内容指定時の入力規則を表示
 			switch (input) {
 				case 1:
 					if (idYN == true) {
@@ -533,14 +532,8 @@ public class AccidentManageSystem {
 					} else {
 						System.out.println("絞込み内容を半角数字で入力してください。1:実験実習中　2:日常生活中　3:通勤通学中　4:サークル活動中");
 						int inputSituation = new java.util.Scanner(System.in).nextInt();
-						//TODO ValueConvertに追加
-						switch(inputSituation) {
-							case 1: whereClauseSituation = "実験実習中"; situationYN = true; break;
-							case 2: whereClauseSituation = "日常生活中"; situationYN = true; break;
-							case 3: whereClauseSituation = "通勤通学中"; situationYN = true; break;
-							case 4: whereClauseSituation = "サークル活動中"; situationYN = true; break;
-							default: System.out.println("入力された数字に誤りがあります。");
-						}
+						whereClauseSituation = valueConvert.convertSituation(inputSituation);
+						situationYN = true;
 						break;
 					}
 				case 13:
@@ -550,19 +543,8 @@ public class AccidentManageSystem {
 					} else {
 						System.out.println("絞込み内容を半角数字で入力してください。1:はさまれ、巻き込まれ　2:切れ、こすれ　3:墜落、転落　4:交通事故　5:飛来、落下　6:激突　7:転倒　8:高温、低温物との接触　9:有害物との接触");
 						int inputType = new java.util.Scanner(System.in).nextInt();
-						//TODO ValueConvertに追加
-						switch(inputType) {
-							case 1: whereClauseType = "はさまれ、巻き込まれ"; typeYN = true; break;
-							case 2: whereClauseType = "切れ、こすれ"; typeYN = true; break;
-							case 3: whereClauseType = "墜落、転落"; typeYN = true; break;
-							case 4: whereClauseType = "交通事故"; typeYN = true; break;
-							case 5: whereClauseType = "飛来、落下"; typeYN = true; break;
-							case 6: whereClauseType = "激突"; typeYN = true; break;
-							case 7: whereClauseType = "転倒"; typeYN = true; break;
-							case 8: whereClauseType = "高温、低温物との接触"; typeYN = true; break;
-							case 9: whereClauseType = "有害物との接触"; typeYN = true; break;
-							default: System.out.println("入力された数字に誤りがあります。");
-						}
+						whereClauseType = valueConvert.convertType(inputType);
+						typeYN = true;
 						break;
 					}
 				default:
