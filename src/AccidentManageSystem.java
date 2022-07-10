@@ -362,5 +362,6 @@ public class AccidentManageSystem {
 	
 	public void viewConditional() {
 		System.out.println("絞込み表示を行ないます。\n");
+		test
 	}
 }
