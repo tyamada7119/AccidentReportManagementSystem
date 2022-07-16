@@ -40,7 +40,7 @@ public class ValueConvert {
 	public String gender;
 	public String position;
 	
-	//データの変換
+	//データの変換処理
 	public String returnDayOfTheWeek(int year, int month, int date) {
 		Calendar cal = Calendar.getInstance();
 		cal.set(year, month,  date);
@@ -60,27 +60,65 @@ public class ValueConvert {
 			case Calendar.SATURDAY:
 				return "土";
 			default:
-				return "year, month, dateのいずれかの入力形式に誤りがあります。";
+				return "入力された数字に誤りがあります。";
 		}
 	}
 	
-	public String convertGender(int genderX) {
-		switch (genderX) {
+	public String convertGender(int gender) {
+		switch (gender) {
 			case 1: return "男"; 
 			case 2: return "女";
 			case 3: return "その他";
-			default: return "genderの入力が正しくありません";
+			default: return "入力された数字に誤りがあります。";
 		}
 	}
 	
-	public String convertPosition(int positionX) {
-		switch (positionX) {
+	public String convertPosition(int position) {
+		switch (position) {
 			case 1: return "学生"; 
 			case 2: return "教員";
 			case 3: return "事務";
 			case 4: return "他職員";
 			case 5: return "外部";
-			default: return "positionの入力が正しくありません";
+			default: return "入力された数字に誤りがあります。";
+		}
+	}
+	
+	public String convertDayOfTheWeek(int dayOfTheWeek) {
+		switch(dayOfTheWeek) {
+			case 1: return "月"; 
+			case 2: return "火"; 
+			case 3: return "水"; 
+			case 4: return "木"; 
+			case 5: return "金"; 
+			case 6: return "土"; 
+			case 7: return "日"; 
+			default: return "入力された数字に誤りがあります。";
+		}
+	}
+	
+	public String convertSituation(int situation) {
+		switch(situation) {
+			case 1: return "実験実習中";
+			case 2: return "日常生活中"; 
+			case 3: return "通勤通学中"; 
+			case 4: return "サークル活動中"; 
+			default: return "入力された数字に誤りがあります。";
+		}
+	}
+	
+	public String convertType(int type) {
+		switch(type) {
+			case 1: return "はさまれ、巻き込まれ";
+			case 2: return "切れ、こすれ";
+			case 3: return "墜落、転落";
+			case 4: return "交通事故";
+			case 5: return "飛来、落下";
+			case 6: return "激突";
+			case 7: return "転倒";
+			case 8: return "高温、低温物との接触";
+			case 9: return "有害物との接触";
+			default: return "入力された数字に誤りがあります。";
 		}
 	}
 	
